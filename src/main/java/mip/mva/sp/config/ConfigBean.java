@@ -165,6 +165,10 @@ public class ConfigBean implements InitializingBean {
 	}
 
 	public List<CaVO> getCaListFromApi() throws SpException {
+		
+		return null;
+		
+		/*
 		String serverDomain = verifyConfig.getPush().getOpnPushServerList();
 
 		Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -194,6 +198,7 @@ public class ConfigBean implements InitializingBean {
 		}
 
 		return caList;
+		*/
 	}
 
 }

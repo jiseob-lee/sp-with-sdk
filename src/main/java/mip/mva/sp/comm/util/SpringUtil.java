@@ -1,6 +1,6 @@
 package mip.mva.sp.comm.util;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
