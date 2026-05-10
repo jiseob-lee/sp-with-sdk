@@ -276,7 +276,7 @@ public class MipController {
 
 			trxInfo = trxInfoService.getTrxInfo(trxInfo.getTrxcode());
 
-			trxInfo.setVp(null);
+			//trxInfo.setVp(null);
 
 			mipApiData.setResult(true);
 			mipApiData.setData(Base64Util.encode(ConfigBean.gson.toJson(trxInfo)));
@@ -343,7 +343,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 VP data"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/vpdata")
+	@PostMapping(value = "/vpdata")
 	public MipApiDataVO getVPData(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("VP data 조회!");
 
@@ -380,7 +380,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 Privacy data"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/privacy")
+	@PostMapping(value = "/privacy")
 	public MipApiDataVO getPrivacy(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("Privacy 조회!");
 
@@ -417,7 +417,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 Privacy data"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/privacyWithVcType")
+	@PostMapping(value = "/privacyWithVcType")
 	public MipApiDataVO getPrivacyWithVcType(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("Privacy 조회 - with VC Type!");
 
@@ -454,7 +454,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 Privacy data"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/privacyZkp")
+	@PostMapping(value = "/privacyZkp")
 	public MipApiDataVO getPrivacyZkp(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("Privacy 조회 - 영지식!");
 
@@ -491,7 +491,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 ZkpSchemaName 목록"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/zkpSchemaName")
+	@PostMapping(value = "/zkpSchemaName")
 	public MipApiDataVO getZkpSchemaName(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("ZkpSchemaName 조회!");
 
@@ -528,7 +528,7 @@ public class MipController {
 	 * @return {"result": true, "data": "base64로 인코딩된 CA명"}
 	 * @throws SpException
 	 */
-	// @PostMapping(value = "/caName")
+	@PostMapping(value = "/caName")
 	public MipApiDataVO getCaName(@RequestBody MipApiDataVO mipApiData) throws SpException {
 		LOGGER.debug("CA명 조회!");
 
