@@ -22,7 +22,7 @@
         "didFilePath": "./example.did"
     },
     "sp": {
-        "serverDomain": "http://172.30.1.76:8088",
+        "serverDomain": "http://172.30.1.9:8088",
         "biImageUrl": "https://www.mobileid.go.kr/resources/images/main/mdl_ico_homepage.ico",
         "biImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACOElEQVRIia2Wz04TURSHv3MrwWADTcqfQIKUdOGGxDY2umChazeOiQ8wyEOQrqyrxvgOMo0vMGwwcePaRFMIxLAhVmowRDGtgapA73FRC0qZ6TT0t5t7z_1-587MuecKISq65ZTQfAA4AglEMgCorinUAF-JreS9bCWIIcFg-0QENyyBtlTxFPP0IqMOg2fuOwdkGSERBX7mQg10YcnL-YEGRfe9a4TlnsDnZJWFvHfL6zDoB_xUqg_bO5EWvJwy2HLPryXQgJrFZPNetmIAjDQLfYMDCAkjzQKAFN1yyoj92Bk1w-KLJElg780mpZdHZ1PJGRafJ0nyi43HH3gV4GPVzBqDdcKSOTm2TKQnGP5nbPpRnGSEjRisYxDCDRpNuD7M3RvtkTi59CAH9ePuDoJjgFRo0JcGewwydS_eep6fYHL0N9XtZncD1REDzIRH_WBr2zKSHmcamLs9RPzbIWuN7nxEMiZCGG_LPzkZvcad-THm0gPsb-1SjbIQMMCnrlGrX9mpDzB-f4ypoQbVlaOuSwAU1g0QeBKe6TtbO8fEJ69yZeeA1_uR-AjUDIrfPRQ2Vw-pY9nd-ByNDqD4IYV2eVk1s6Z1hmup_3gtnZ5FVmMFRet9Q6N1q7ECtP4i8l62Ihqte0WRKG67u53WwZKX862ycFm4Vf7rahe2TBU8QUZ6AStaF8U93zI7KnnJy_mqsUxvH15LqrHMeTgE3Cra-tvpHARHISFws5Ut6wI1FN9i_LBryx8ui9qqWLNPmAAAAABJRU5ErkJggg",
         "isCi": true,
