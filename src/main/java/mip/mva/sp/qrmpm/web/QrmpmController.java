@@ -59,6 +59,8 @@ public class QrmpmController {
 	public MipApiDataVO start(@RequestBody T510VO t510) throws SpException {
 		LOGGER.debug("QR-MPM 시작!");
 
+		ConfigBean configBean = new ConfigBean();
+		
 		T510VO data = qrmpmService.start(t510);
 
 		MipApiDataVO mipApiData = new MipApiDataVO();
