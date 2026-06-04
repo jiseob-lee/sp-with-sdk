@@ -861,14 +861,17 @@ public class VerifyManager implements InitializingBean {
 		String vpData = "";
 
 		try {
-			LOGGER.debug("encryptType : {}", vCVerifyProfileResult.getEncryptType());
-			LOGGER.debug("keyType : {}", vCVerifyProfileResult.getKeyType());
+			LOGGER.debug("#### encryptType : {}", vCVerifyProfileResult.getEncryptType());
+			LOGGER.debug("#### keyType : {}", vCVerifyProfileResult.getKeyType());
 
 			byte[] decVp = null;
 
 			AESType aESType = vCVerifyProfileResult.getEncryptType() == 1 ? AESType.AES128 : AESType.AES256;
 			EncryptKeyTypeEnum encryptKeyTypeEnum = EncryptKeyTypeEnum.getEnum(vCVerifyProfileResult.getKeyType());
 
+			LOGGER.debug("#### aESType : {}", aESType);
+			LOGGER.debug("#### encryptKeyTypeEnum : {}", encryptKeyTypeEnum);
+			
 			if (encryptKeyTypeEnum == EncryptKeyTypeEnum.ALGORITHM_RSA) {
 				decVp = keyManager.rsaDecrypt(didWalletFile.getEncryptKeyId(), HexUtils.toBytes(vCVerifyProfileResult.getData()), aESType);
 			} else if (encryptKeyTypeEnum == EncryptKeyTypeEnum.ALGORITHM_RSA_OAEP_SHA256) {
