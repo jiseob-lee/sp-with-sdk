@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -166,9 +167,33 @@ public class ConfigBean implements InitializingBean {
 
 	public List<CaVO> getCaListFromApi() throws SpException {
 		
-		return null;
+		//return null;
 		
 		/*
+		List<CaVO> caList = verifyConfig.getCaList();
+		
+		LOGGER.debug("#### caList : {}", caList.toString());
+		
+		for (int i=0; i < caList.size(); i++) {
+			CaVO ca = caList.get(i);
+			LOGGER.debug("#### {} : {}", i, ca.getAppName());
+		}
+
+		LOGGER.debug("blank link.");
+		
+        // 리스트 섞기
+        Collections.shuffle(caList);
+		
+		for (int i=0; i < caList.size(); i++) {
+			CaVO ca = caList.get(i);
+			LOGGER.debug("#### {} : {}", i, ca.getAppName());
+		}
+        
+		return caList;
+		*/
+		
+		
+		
 		String serverDomain = verifyConfig.getPush().getOpnPushServerList();
 
 		Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -198,7 +223,7 @@ public class ConfigBean implements InitializingBean {
 		}
 
 		return caList;
-		*/
+		
 	}
 
 }
