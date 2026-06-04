@@ -30,6 +30,7 @@ import mip.mva.sp.comm.vo.MipApiDataVO;
 import mip.mva.sp.comm.vo.TrxInfoVO;
 import mip.mva.sp.comm.vo.VP;
 import mip.mva.sp.config.ConfigBean;
+import mip.mva.sp.config.vo.CaVO;
 
 /**
  * @Project 모바일 운전면허증 서비스 구축 사업
@@ -571,14 +572,20 @@ public class MipController {
 		MipApiDataVO mipApiData = new MipApiDataVO();
 
 		try {
+			List<CaVO> caList = configBean.getCaListFromApi();
+			
 			Map<String, Object> spInfo = new HashMap<String, Object>();
 
 			spInfo.put("serviceList", configBean.getVerifyConfig().getServiceList());
 			spInfo.put("caList", configBean.getVerifyConfig().getCaList());
+			
+			//spInfo.put("caList", caList);
 
 			mipApiData.setResult(true);
 			mipApiData.setData(Base64Util.encode(ConfigBean.gson.toJson(spInfo)));
+			
 		} catch (Exception e) {
+			
 			LOGGER.error(e.getMessage(), e);
 
 			throw new SpException(MipErrorEnum.UNKNOWN_ERROR, null, e.getMessage());
